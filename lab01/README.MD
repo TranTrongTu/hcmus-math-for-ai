@@ -1,38 +1,38 @@
-# 🏡 Lab 01: Dự đoán giá nhà với Hồi quy Tuyến tính (House Price Prediction)
+# 🏡 Lab 01: House Price Prediction via Linear Regression
 
-## 📝 Giới thiệu
-Dự án này là Đồ án 1 thuộc môn **Phương pháp Toán cho Trí tuệ Nhân tạo**. Mục tiêu của dự án là xây dựng mô hình Hồi quy Tuyến tính (Linear Regression) để dự đoán giá nhà (SalePrice) dựa trên các đặc trưng của ngôi nhà. Điểm nhấn của dự án là việc **tự cài đặt (from scratch) các thuật toán tối ưu toán học** mà không phụ thuộc vào các thư viện Machine Learning bậc cao, nhằm hiểu sâu về cơ chế hoạt động cốt lõi của mô hình.
+## 📝 Overview
+This project is the first assignment for the **Mathematical Methods for Artificial Intelligence** course. The objective is to build a Linear Regression model to predict house prices (`SalePrice`) based on various house features. The highlight of this project is **implementing mathematical optimization algorithms entirely from scratch**, without relying on high-level Machine Learning libraries, to gain a deep understanding of the model's core mechanics.
 
-## ✨ Điểm nổi bật về Kỹ thuật
-- **Cài đặt từ đầu (From Scratch):** Triển khai thuật toán **Gradient Descent** hoàn toàn bằng `NumPy` để tính toán ma trận và cập nhật trọng số.
-- **Phân tích Dữ liệu Khám phá (EDA):** Sử dụng `pandas`, `matplotlib`, và `seaborn` để trực quan hóa, phân tích phân phối của biến mục tiêu và ma trận tương quan giữa các đặc trưng.
-- **Xử lý Ngoại lệ (Outlier Handling):** Đi sâu vào phân tích lỗi (Error Analysis) thông qua việc trực quan hóa sự chênh lệch giữa giá trị thực tế và dự đoán (Actual vs Predicted). So sánh chi tiết các biến thể mô hình (Model 2a, 2b, 2c) để đánh giá mức độ ảnh hưởng của các điểm dữ liệu bất thường.
-- **Đánh giá Mô hình:** Đánh giá độ tin cậy của thuật toán thông qua các metric tự xây dựng và phân tích trực quan phần dư (residuals).
+## ✨ Technical Highlights
+- **From Scratch Implementation:** Deployed the **Gradient Descent** algorithm entirely using `NumPy` for matrix calculations and weight updates.
+- **Exploratory Data Analysis (EDA):** Utilized `pandas`, `matplotlib`, and `seaborn` to visualize and analyze the distribution of the target variable and the correlation matrix among features.
+- **Outlier Handling:** Delved into Error Analysis by visualizing the discrepancy between actual and predicted values (Actual vs Predicted). Conducted detailed comparisons of model variants (Model 2a, 2b, 2c) to evaluate the impact of anomalous data points.
+- **Model Evaluation:** Assessed the algorithm's reliability using custom-built metrics and visual analysis of residuals.
 
-## 📂 Cấu trúc Thư mục
-- `dataset/`: Chứa dữ liệu huấn luyện (`train.csv`), dữ liệu kiểm thử (`test.csv`) và file giải thích các biến (`data_description.txt`).
-- `24122024.ipynb`: File Jupyter Notebook chính chứa toàn bộ mã nguồn: từ bước làm sạch dữ liệu, EDA, cài đặt thuật toán đến đánh giá mô hình.
-- `report.pdf`: Báo cáo chi tiết về cơ sở toán học, đạo hàm các hàm mất mát và phân tích kết quả thực nghiệm.
+## 📂 Directory Structure
+- `dataset/`: Contains the training data (`train.csv`), testing data (`test.csv`), and the data dictionary (`data_description.txt`).
+- `24122024.ipynb`: The main Jupyter Notebook containing the full source code: from data cleaning and EDA to algorithm implementation and model evaluation.
+- `report.pdf`: Comprehensive report detailing the mathematical foundations, loss function derivatives, and experimental results analysis.
 
-## 🚀 Hướng dẫn Cài đặt và Sử dụng
+## 🚀 Getting Started
 
-1. **Clone repository:**
+1. **Clone the repository:**
    ```bash
    git clone [https://github.com/TranTrongTu/hcmus-math-for-ai.git](https://github.com/TranTrongTu/hcmus-math-for-ai.git)
    cd hcmus-math-for-ai/lab01
    ```
 
-2. **Cài đặt môi trường:**
-   Đảm bảo bạn đã cài đặt Python. Sau đó, cài đặt các thư viện cần thiết thông qua file `requirements.txt`:
+2. **Environment Setup:**
+   Ensure Python is installed. Then, install the required dependencies via the `requirements.txt` file:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Chạy Jupyter Notebook:**
-   Mở notebook để xem các bước huấn luyện và biểu đồ phân tích:
+3. **Run the Jupyter Notebook:**
+   Open the notebook to view the training steps and analytical plots:
    ```bash
    jupyter notebook 24122024.ipynb
    ```
 
-## 📈 Tóm tắt Kết quả
-Mô hình đã thể hiện sự hội tụ ổn định thông qua thuật toán Gradient Descent tự cài đặt. Quá trình đối chiếu (Actual vs Predicted) kết hợp với việc khoanh vùng các điểm ngoại lệ (Outliers) cho thấy việc tinh chỉnh hàm mất mát toán học và tối ưu hóa đặc trưng đóng vai trò quyết định trong việc cải thiện độ chính xác dự đoán của mô hình.
+## 📈 Results Summary
+The model demonstrated stable convergence through the custom-implemented Gradient Descent algorithm. The Actual vs Predicted cross-referencing, combined with isolating outliers, showed that refining the mathematical loss function and optimizing features played a crucial role in improving the model's prediction accuracy.
